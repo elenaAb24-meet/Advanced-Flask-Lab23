@@ -8,14 +8,24 @@
 	</head>
 	<body>
 
+		<h1> Hello!</h1>
+            <p> View my posts: </p>
+            <h2> Posts </h2>
+            <ul>
+                {% for post in posts %}
+                <img src= "{{post}}"> </li>
+                {% endfor %}
+            </ul>
+
+
 		<!-- Wrapper -->
 			<div id="wrapper">
 
 				<!-- Header -->
 					<header id="header">
-						<span class="avatar"><img src="{{url_for('static',filename='images/avatar.jpg')}}" alt="" /></span>
+						<span class="avatar"><img src="{{image}}" alt="" /></span>
 
-            <h1>Description</h1>
+            <h3>{{user}}</h3>
             <br>
             <!-- About me button -->
             <a href="#"><button style="color:white;width:40%" >More about me</button></a>
@@ -39,7 +49,7 @@
                 <div>
                       <a href="">
                         <img src="static/images/thumbs/01.jpg" alt="" />
-                        <h3>Caption... blah blah blah</h3>
+                        <h4>Caption... blah blah blah</h4>
                       </a>
                 
                       <a href="">
@@ -50,7 +60,7 @@
                 <div>
                   <a href="">
                         <img src="{{url_for('static',filename='images/thumbs/03.jpg')}}" alt="" />
-                        <h3>Caption... blah blah blah</h3>
+                        <h5>Caption... blah blah blah</h5>
                       </a>
                 </div>  
 
